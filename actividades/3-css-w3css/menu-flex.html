@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Simple con Flexbox</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        
+        /* Estilos del menú */
+        .menu-container {
+            background-color: #2c3e50;
+            padding: 0 20px;
+        }
+        
+        .menu {
+            display: flex;
+            list-style-type: none;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .menu li a {
+            color: #ecf0f1;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        
+        .menu li a:hover {
+            background-color: #3498db;
+        }
+        
+        /* Menú responsive */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            padding: 15px 20px;
+            color: #ecf0f1;
+        }
+        
+        /* Media queries para dispositivos móviles */
+        @media (max-width: 768px) {
+            .menu {
+                flex-direction: column;
+                display: none;
+            }
+            
+            .menu.active {
+                display: flex;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu-container">
+        <div class="menu-toggle" id="mobile-menu">
+            ☰ Menú
+        </div>
+        <ul class="menu" id="main-menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Portafolio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        // JavaScript para el menú móvil
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            document.getElementById('main-menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

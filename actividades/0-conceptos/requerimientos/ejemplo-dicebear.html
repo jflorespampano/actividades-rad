@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img 
+        id="random-avatar" 
+        src="https://api.dicebear.com/7.x/lorelei/svg?seed=12345" 
+        alt="Avatar"
+        width="120"
+        />
+        <button onclick="generateAvatar()">Generar nuevo</button>
+
+    <script>
+    function generateAvatar() {
+        const seed = Math.random().toString(36).substring(2);
+        document.getElementById("random-avatar").src = 
+        `https://api.dicebear.com/7.x/bottts/svg?seed=${seed}`;
+    }
+    </script>
+</body>
+</html>
