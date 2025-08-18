@@ -26,7 +26,7 @@ Rubrica de evaluación:
 2. ubicar el material del curso
 3. instalar [git](https://git-scm.com/downloads)
     * revisar el archivo '/git.md'
-4. instalar al menos 2 IA (pej. Deep Seek , Gemini), pregunte a su IA:
+4. instalar al menos 2 IA (pej. Deep Seek , Gemini, [perplexi](https://www.perplexity.ai/)), pregunte a su IA:
     * ¿que es HTTP?
     * ¿que es una api?
     * ¿que es una api rest?
@@ -71,6 +71,24 @@ ubique las herramientas:
 
 lea el archivo 'atajos-vscode.md'
 
+## realizar consultas
+
+* Instalar Git
+* revise el archivo curl.MD
+* En la consola bash usando la siguiente liga:[api fake](https://jsonplaceholder.typicode.com/)
+* Realice las consultas en curl inidcadas:
+    * consultar 10 usuarios
+    * consultar el usuario con id=1
+    * consultar todos los comments
+
+resumen curl.md:
+```sh
+curl -X POST/GET/PATCH/DELETE [url]
+-H "Content-Type: [content  type]"
+-d '[request data]'
+-v/-i
+```
+
 ## entregables
 
 1. equipos integrados y proyecto seleccionado
@@ -79,6 +97,6 @@ lea el archivo 'atajos-vscode.md'
 4. navaja suiza para desarrolladores instalada
 5. realizar las consultas solicitadas por tu profesor a la api fake, en curl y en thunder.
 6. Indstalar escalidraw
-7. entregar la maqueta de la interfazz en escalidraw
+7. entregar la maqueta de la interfaz en escalidraw
 8. tener una cuenta en GitHub
  

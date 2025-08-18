@@ -6,7 +6,10 @@ Para este curso se recomienda usar/instalar las siguientes herramientas
 * [navaja suiza para desarrolladores](https://devtoys.app/)
 * [git](https://git-scm.com/)
 * [deep seek](https://www.deepseek.com)
-* [probar la ia kimi](https://kimi.moonshot.cn/)
+* [probar la ia kimi (en chino)](https://kimi.moonshot.cn/)
+* GitHub
+* Git
+* [Notion](https://www.notion.com/es)
 * [VSCODE](https://code.visualstudio.com/) editor de código libre
 * En vscode instalar los compementos
     * ES7+ React/Redux/React-Native snippets
@@ -16,11 +19,12 @@ Para este curso se recomienda usar/instalar las siguientes herramientas
     * Prettier - Code formatter
     * SQLite Viewer
     * Thunder Client
+    * Rest Client
     * vscode-pdf
     * Turbo Console Log
-* Opcionalmente a "Thunder Client" puede usar "insomnia" o "postman"
-* En línea
-    * [abra una cuenta en github](https://github.com/)
+* Opcionalmente a "Thunder Client o Rest Client" puede usar "insomnia" o "postman"
+* Herramientas en línea
+    * [github](https://github.com/)
     * [validar json](https://jsonlint.com/)
     * [Excalidraw](https://excalidraw.com/)
     * [probar css en linea](https://codi.link/%7C%7C)
