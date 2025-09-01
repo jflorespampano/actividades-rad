@@ -16,6 +16,7 @@ Para activar flexbox, debes aplicar display: flex o display: inline-flex a un el
 ```css
 .contenedor {
   display: flex; /* o inline-flex */
+  display: inline-flex;
 }
 ```
 

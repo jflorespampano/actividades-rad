@@ -51,7 +51,8 @@ Vea el resultado, regrese el mrgen y padding a 0.
 }
 ```
 
-El box-shadow tiene los parámetros: /* offset-x | offset-y | difuminación | color */
+El box-shadow tiene los parámetros: 
+/* offset-x | offset-y | difuminación | color */
 rgba(red, green, blue, alpha) alpha The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (not transparent at all).
 
 Pruebe cambiando margin a left, y width a 50%.
@@ -77,7 +78,7 @@ Pruebe cambiando margin a left, y width a 50%.
     </ul>
 </nav>
 ```
-
+En el área css copia:
 ```css
 li{
   list-style-type: none;
