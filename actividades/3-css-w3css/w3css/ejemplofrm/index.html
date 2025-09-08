@@ -3,44 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=<<device-width>>, initial-scale=1.0">
-    <title>mi pagina</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetDataForm</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 </head>
 <body>
-    <div class="div_main">
-        <form class="w3-panel w3-pale-green" id="frm_alta">
-            <fieldset class="w3-panel w3-pale-blue w3-padding-16">
-                <legend>id</legend>
-                <label for="txt_id">id</label>
-                <input type="text" id="txt_id" name="id">
-            </fieldset>
-            <fieldset class="w3-panel w3-pale-blue w3-padding-16">
-                <legend>sexo</legend>
-                <label for="rb_h">hombre</label>
-                <input type="radio" id="rb_h" name="sexo" value="h">
-                <label for="rb_m">mujer</label>
-                <input type="radio" id="rb_m" name="sexo" value="m" checked>
-            </fieldset>
-            <fieldset class="w3-panel w3-pale-blue w3-padding-16">
-                <legend>estado</legend>
-                <label for="cmb_estado"></label>
-                <select id="cmb_estado">
-                    <option value="PU">Puebla</option>
-                    <option value="MX">Mexico city</option>
-                    <option value="CC">Ciudad del Carmen</option>
-                    <option value="CA">Campeche</option>
-                    <option value="VH">Villa Hermosa</option>
-                </select>
-            </fieldset>
-            <fieldset class="w3-panel w3-pale-blue w3-padding-16">
-                <label for="_semana"></label>
-                <input type="week" id="_semana">
-            </fieldset>
-        </form>
-        <input type="button" id="btn_aceptar" value="enviar">
-        <input type="button" id="btn_cancelar" value="cancelar">
+    <div class="div_main w3-row w3-container w3-card-4 w3-light-grey w3-margin w3-padding-16">
+        <div class="w3-col l3">
+            <div class="menu-container">
+            <!-- Menú Vertical -->
+            <nav class="w3-bar-block">
+                <div class="w3-bar-item w3-large menu-header">MENÚ PRINCIPAL</div>
+                <a href="#" class="w3-bar-item w3-button w3-padding-16">
+                    <i class="fa fa-home w3-margin-right"></i> Inicio
+                </a>
+                <a href="#" class="w3-bar-item w3-button w3-padding-16">
+                    <i class="fa fa-user w3-margin-right"></i> Perfil
+                </a>
+                <a href="#" class="w3-bar-item w3-button w3-padding-16">
+                    <i class="fa fa-cog w3-margin-right"></i> Configuración
+                </a>
+                <a href="#" class="w3-bar-item w3-button w3-padding-16">
+                    <i class="fa fa-sign-out w3-margin-right"></i> Salir
+                </a>
+            </nav>
+        </div>
+        </div>
+        <div class="w3-col l6">
+            <h2 class="w3-center w3-text-blue">Formulario de alta</h2>
+            <form class="w3-panel w3-pale-green" id="frm_alta">
+                <fieldset class="w3-panel w3-pale-blue w3-padding-16">
+                    <legend>id</legend>
+                    <label for="txt_id">id</label>
+                    <input type="text" id="txt_id" name="id" value="0">
+                </fieldset>
+                <fieldset class="w3-panel w3-pale-blue w3-padding-16">
+                    <legend>nombre</legend>
+                    <label for="txt_nombre">id</label>
+                    <input type="text" id="txt_nombre" name="nombre" value="juan">
+                </fieldset>
+                <fieldset class="w3-panel w3-pale-blue w3-padding-16">
+                    <legend>sexo</legend>
+                    <label for="rb_h">hombre</label>
+                    <input type="radio" id="rb_h" name="sexo" value="h">
+                    <label for="rb_m">mujer</label>
+                    <input type="radio" id="rb_m" name="sexo" value="m" checked>
+                </fieldset>
+                <fieldset class="w3-panel w3-pale-blue w3-padding-16">
+                    <legend>estado</legend>
+                    <label for="cmb_estado"></label>
+                    <select id="cmb_estado" name ="estado">
+                        <option value="PU">Puebla</option>
+                        <option value="MX">Mexico city</option>
+                        <option value="CC">Ciudad del Carmen</option>
+                        <option value="CA">Campeche</option>
+                        <option value="VH">Villa Hermosa</option>
+                    </select>
+                </fieldset>
+                <fieldset class="w3-panel w3-pale-blue w3-padding-16">
+                    <label for="_semana"></label>
+                    <input type="date" id="fecha" name="fecha" value="2024-06-01" min="2024-01-01" max="2024-12-31">
+                </fieldset>
+                <input type="button" id="btn_aceptar" value="enviar">
+                <input type="button" id="btn_cancelar" value="cancelar">
+            </form>
+
+        </div>
+        <div class="w3-col l3 w3-padding-16">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil architecto fuga nam ut maxime consequuntur voluptatibus quisquam velit, dicta non molestiae earum minus sint possimus, voluptatum, minima pariatur? Placeat, quidem?</p>
+        </div>
     </div>
     <script src="./js/main.js"></script>
 </body>

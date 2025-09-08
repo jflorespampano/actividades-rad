@@ -38,7 +38,7 @@ body {
 }
 ```
 Vea el resultado, pruebe cambiando el margen y el pading a 15px.
-Vea el resultado, regrese el mrgen y padding a 0.
+Vea el resultado, regrese el margen y padding a 0.
 
 * agregue los estilos:
 ```css
