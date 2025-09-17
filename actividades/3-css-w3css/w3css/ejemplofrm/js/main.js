@@ -9,12 +9,12 @@ window.onload=function(){
             // const fecha=document.forms["frm_alta"].elements.fecha.value;
             const fecha = document.querySelector('#fecha').value;
             // const fecha = document.getElementById('fecha').value;
-            
-
             alert(`nombre:${nombre} sexo:${sexo}+ estado: ${estado} fecha:${fecha}`);
         };
     }
+
     document.querySelector("#btn_aceptar").addEventListener('click',traeFuncion());
+    
     document.querySelector("#btn_cancelar").addEventListener('click',()=>{
         const form = document.getElementById('frm_alta');
         const formData = new FormData(form);

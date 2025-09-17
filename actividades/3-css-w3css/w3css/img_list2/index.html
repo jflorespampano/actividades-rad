@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería 3x3 con W3.CSS</title>
+    <!-- Incluir W3.CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .galeria {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .w3-row {
+            margin-bottom: 20px;
+        }
+        
+        .imagen-contenedor {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .imagen-contenedor:hover {
+            transform: scale(1.02);
+        }
+        
+        .w3-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .imagen-contenedor:hover .w3-image {
+            transform: scale(1.1);
+        }
+        
+        .pie-imagen {
+            padding: 10px;
+            text-align: center;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .imagen-contenedor:hover .pie-imagen {
+            opacity: 1;
+        }
+        
+        .w3-container {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body class="w3-light-grey">
+
+<div class="w3-container w3-padding-32">
+    <h2 class="w3-center w3-text-blue">Galería de Imágenes 3x3</h2>
+    <p class="w3-center">Usando W3.CSS - Totalmente responsive</p>
+</div>
+
+<div class="galeria">
+    <!-- Primera fila -->
+    <div class="w3-row-padding">
+        <div class="w3-third w3-margin-bottom">
+            <div class="imagen-contenedor w3-card-4">
+                <img src="./imgs/img1.jpg" 
+                     alt="Naturaleza" class="w3-image">
+                <div class="pie-imagen">Ave</div>
+                <div class="w3-container w3-light-blue">
+                    <h4>Gucamaya</h4>
+                    <p>Guacamaya azul</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w3-third w3-margin-bottom">
+            <div class="imagen-contenedor w3-card-4">
+                <img src="./imgs/img2.jpg" 
+                     alt="Ciudad" class="w3-image">
+                <div class="pie-imagen">Ave</div>
+                <div class="w3-container w3-green">
+                    <h4>Ave</h4>
+                    <p>ae del paraiso</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w3-third w3-margin-bottom">
+            <div class="imagen-contenedor w3-card-4">
+                <img src="./imgs/img3.jpg" 
+                     alt="Playas" class="w3-image">
+                <div class="pie-imagen">Patriota</div>
+                <div class="w3-container w3-orange">
+                    <h4>soldado</h4>
+                    <p>Ave genrada con ia</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Segunda fila -->
+    <div class="w3-row-padding">
+        <div class="w3-third w3-margin-bottom">
+            <div class="imagen-contenedor w3-card-4">
+                <img src="./imgs/img4.jpg" 
+                     alt="Arquitectura" class="w3-image">
+                <div class="pie-imagen">Paatriota</div>
+                <div class="w3-container w3-purple">
+                    <h4>Palestino</h4>
+                    <p>Palestino luchando contra el invasor sionista</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w3-third w3-margin-bottom">
+            <div class="imagen-contenedor w3-card-4">
+                <img src="./imgs/img5.jpg" 
+                     alt="Tecnología" class="w3-image">
+                <div class="pie-imagen">Africa</div>
+                <div class="w3-container w3-red">
+                    <h4>Africa</h4>
+                    <p>Relieves africanos</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w3-third w3-margin-bottom">
+            <div class="imagen-contenedor w3-card-4">
+                <img src="./imgs/img6.jpg" 
+                     alt="Arte" class="w3-image">
+                <div class="pie-imagen">Ave</div>
+                <div class="w3-container w3-pink">
+                    <h4>una mas</h4>
+                    <p>un ave mas</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tercera fila -->
+    <div class="w3-row-padding">
+        <div class="w3-third w3-margin-bottom">
+            <div class="imagen-contenedor w3-card-4">
+                <img src="./imgs/img1.jpg" 
+                     alt="Deportes" class="w3-image">
+                <div class="pie-imagen">Ave</div>
+                <div class="w3-container w3-teal">
+                    <h4>una mas</h4>
+                    <p>otra ave mas</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w3-third w3-margin-bottom">
+            <div class="imagen-contenedor w3-card-4">
+                <img src="./imgs/img2.jpg" 
+                     alt="Gastronomía" class="w3-image">
+                <div class="pie-imagen">Ave</div>
+                <div class="w3-container w3-brown">
+                    <h4>unaa mas</h4>
+                    <p>otra ave mas</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w3-third w3-margin-bottom">
+            <div class="imagen-contenedor w3-card-4">
+                <img src="./imgs/img3.jpg" 
+                     alt="Viajes" class="w3-image">
+                <div class="pie-imagen">Ave</div>
+                <div class="w3-container w3-indigo">
+                    <h4>Viajes</h4>
+                    <p>Destinos turísticos alrededor del mundo</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="w3-container w3-center w3-padding-32">
+    <div class="w3-panel w3-blue w3-round-large">
+        <h3>Galería Responsive con W3.CSS</h3>
+        <p>Esta galería se adapta automáticamente a diferentes tamaños de pantalla</p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Imágenes</title>
+    <style>
+        .galeria {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .fila {
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* Espacio igual en ambos ejes */
+            flex-wrap: wrap;
+        }
+        
+        .imagen-contenedor {
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .imagen-contenedor:hover {
+            transform: scale(1.05);
+        }
+        
+        .imagen {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /*llene todo el contenedor, mantine relacion de aspecto*/
+        }
+        
+    </style>
+</head>
+<body>
+
+<div class="galeria">
+    <!-- Primera fila -->
+    <div class="fila">
+        <div class="imagen-contenedor">
+            <img src="./imgs/img1.jpg" alt="Imagen 1" class="imagen">
+            
+        </div>
+        <div class="imagen-contenedor">
+            <img src="./imgs/img2.jpg" alt="Imagen 2" class="imagen">
+            
+        </div>
+        <div class="imagen-contenedor">
+            <img src="./imgs/img3.jpg" alt="Imagen 3" class="imagen">
+            
+        </div>
+    </div>
+
+    <!-- Segunda fila -->
+    <div class="fila">
+        <div class="imagen-contenedor">
+            <img src="./imgs/img4.jpg" alt="Imagen 4" class="imagen">
+            
+        </div>
+        <div class="imagen-contenedor">
+            <img src="./imgs/img5.jpg" alt="Imagen 5" class="imagen">
+            
+        </div>
+        <div class="imagen-contenedor">
+            <img src="./imgs/img6.jpg" alt="Imagen 6" class="imagen">
+            
+        </div>
+    </div>
+
+    <!-- Tercera fila -->
+    <div class="fila">
+        <div class="imagen-contenedor">
+            <img src="./imgs/img1.jpg" alt="Imagen 7" class="imagen">
+            
+        </div>
+        <div class="imagen-contenedor">
+            <img src="./imgs/img2.jpg" alt="Imagen 8" class="imagen">
+            
+        </div>
+        <div class="imagen-contenedor">
+            <img src="./imgs/img3.jpg" alt="Imagen 9" class="imagen">
+            
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
