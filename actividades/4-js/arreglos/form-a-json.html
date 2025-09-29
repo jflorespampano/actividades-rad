@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" />
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" />
+        <h3>Lenguajes que maneja:</h3>
+        <p>
+            <input type="checkbox" name="topics" id="javascript" value="javascript" />
+            <label for="javascript">JavaScript</label>
+
+            <input type="checkbox" name="topics" id="html" value="html" />
+            <label for="html">HTML</label>
+
+            <input type="checkbox" name="topics" id="css" value="css" />
+            <label for="css">CSS</label>
+        </p>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+<script>
+    //https://www.learnwithjason.dev/blog/get-form-values-as-json
+    function handleSubmit(event) {
+        event.preventDefault();
+        console.log('target: ', event.target);
+        const data = new FormData(event.target);
+        console.log('entries: ', data.entries());
+        const value = Object.fromEntries(data.entries());
+        value.topics = data.getAll("topics");
+        console.log("datos en json:",JSON.stringify(value))
+        console.log("topics:",value.topics)
+    }
+    const form = document.querySelector('form');
+    form.addEventListener('submit', handleSubmit);
+</script>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="w3-container">
+        <div class="w3-panel w3-cyan">
+            <p>lista de datos</p>
+        </div>
+        <table class="w3-table-all" style="width:50%">
+            <thead>
+                <tr class="w3-blue-grey">
+                    <td>id</td>
+                    <td>nombre</td>
+                    <td>sexo</td>
+                </tr>
+            </thead>
+            <tbody id="tbl_datos">
+
+            </tbody>
+        </table>
+    </div>
+    <input type="button" onclick="miFuncion()" value="llenar tabla">
+    <input type="button" onclick="miFuncionv2()" value="llenar tabla v2">
+</body>
+<script>
+    let datos = [
+        { id: '01', nombre: 'juan', sexo: 'm' },
+        { id: '02', nombre: 'ana', sexo: 'f' },
+        { id: '03', nombre: 'rosa', sexo: 'f' },
+        { id: '04', nombre: 'pepe', sexo: 'm' },
+        { id: '05', nombre: 'rocio', sexo: 'f' },
+    ];
+    function miFuncion() {
+        let s = "";
+        console.log(datos.slice(0, 4));
+        console.log(datos.filter(d => d.sexo === "m"));
+        datos.forEach(element => {
+            s += "<tr>";
+            s += "<td>" + element.id + "</td>";
+            s += "<td>" + element.nombre + "</td>";
+            s += "<td>" + element.sexo + "</td>";
+            s += "</tr>"
+        });
+        document.querySelector("#tbl_datos").innerHTML = s;
+    }
+    function miFuncionv2() {
+        let s = "";
+        console.log(datos.slice(0, 4));
+        console.log(datos.filter(d => d.sexo === "m"));
+        datos.forEach(element => {
+            s += `<tr>
+                    <td>${element.id}</td>
+                    <td>${element.nombre}</td>
+                    <td>${element.sexo}</td>
+                </tr>
+            `
+        });
+        document.querySelector("#tbl_datos").innerHTML = s;
+    }
+</script>
+
+</html>

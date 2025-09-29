@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8">
+        
+    </head>
+    <body>
+        
+        <input type="button" id="btnMostrar" name="mostrar" value="mostrar json (map)">       
+
+    </body>
+    <script>
+        var users=[
+            {"firstName":"Juan","lastName":"Perez"},
+            {"firstName":"Ana","lastName":"Gomez"},
+            {"firstName":"Luis","lastName":"Lopez"},
+            {"firstName":"Marta","lastName":"Diaz"},
+            {"firstName":"Carlos","lastName":"Sanchez"}
+        ];
+        
+        window.onload=function(){
+            document.getElementById("btnMostrar").addEventListener("click", ()=>{ 
+                const userFullnames = users.map((element)=>{
+                    return `${element.firstName} ${element.lastName}`;
+                })
+                const salida=userFullnames.join('\n') //unir elementos de un array en un string
+                console.log(userFullnames); //arreglo 
+                console.log(salida) //string separado por enter
+            });
+        }
+    </script>
+</html>

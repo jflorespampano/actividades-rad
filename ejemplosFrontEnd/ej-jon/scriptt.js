@@ -1,0 +1,6 @@
+const dt=document.querySelector('#table-data');
+const s=`
+    <tr><td>dato1</td><td>dato2</td></tr>
+    <tr><td>dato3</td><td>dato4</td></tr>
+`;
+dt.innerHTML=s;
