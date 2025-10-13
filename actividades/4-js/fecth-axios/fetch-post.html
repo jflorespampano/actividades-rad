@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axios</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+
+</head>
+<body>
+    <div class="w3-container w3-padding-16">
+        <div class="w3-container w3-blue">
+            <h2>Fetch POST Request Example</h2>
+        </div>
+        
+        
+        <p>LLene los campos para enviar un POST request usando Fetch.</p>
+        <form id="postForm" class="w3-container w3-padding-16 w3-card-4 w3-light-grey">
+            <label for="userId">User ID:</label>
+            <input class="w3-input" type="number" id="userId" name="userId" required>
+            
+            <label for="id">ID:</label>
+            <input class="w3-input" type="number" id="id" name="id" required>
+            
+            <label for="title">Title:</label>
+            <input class="w3-input" type="text" id="title" name="title" required>
+            
+            <label for="body">Body:</label>
+            <textarea class="w3-input" id="body" name="body" required></textarea>
+            <br>
+            <button class="w3-button w3-blue" type="submit">Submit</button>  
+        </form>
+
+    </div>
+    <script>
+        document.getElementById('postForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            const form = document.getElementById('postForm');  
+            const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+            const formData = new FormData(form);
+            const formDataObject = Object.fromEntries(formData.entries());
+
+            fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formDataObject)
+            })
+            .then(response => response.json())
+            .then(data => {
+                    console.log('Response:', data);
+                    alert('Post creado satisfactoriamente!');
+            })
+            .catch(error => {
+                    console.error('Error:', error);
+                    alert('un error ha ocurrido en la creación del post.');        
+            });
+        });
+    </script>
+</body>
+</html>
